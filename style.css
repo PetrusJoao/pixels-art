@@ -6,45 +6,56 @@ h1{
     text-align: center;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
+
+#pallete-container{
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto; 
+}
+
 #color-palette{
-    display: block;
+    display: grid;
+    grid-template-columns: 40px 40px 40px 40px 40px;
+    margin-left: 20px;
+    margin-bottom: 5px;
 }
 #color-palette-1{
     background-color: black;
-    height: 100px;
-    width: 100px;
+    height: 40px;
+    width: 40px;
     display: inline-block;
     border: solid 1px black;
 }
 #color-palette-2{
     background-color: red;
-    width: 100px;
-    height: 100px;
+    width: 40px;
+    height: 40px;
     display: inline-block;
     border: solid 1px black;
 }
 #color-palette-3{
     background-color: blue;
-    width: 100px;
-    height: 100px;
+    width: 40px;
+    height: 40px;
     display: inline-block;
     border: solid 1px black;
 }
 #color-palette-4{
     background-color: green;
-    width: 100px;
-    height: 100px;
+    width: 40px;
+    height: 40px;
     display: inline-block;
     border: solid 1px black;
 }
 
-#pixel-board{
-    display: inline-block;
+#pixel-board .board{
+    display: grid;
+    grid-template-columns: 40px 40px 40px 40px 40px;
 }
 
 .pixel{
-    width: 100px;
-    height: 100px;
+    width: 40px;
+    height: 40px;
     background-color: white;
     border: solid 1px black;
 }
