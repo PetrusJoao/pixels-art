@@ -37,3 +37,14 @@ h1{
     display: inline-block;
     border: solid 1px black;
 }
+
+#pixel-board{
+    display: inline-block;
+}
+
+.pixel{
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border: solid 1px black;
+}
