@@ -9,43 +9,28 @@ elementoPreto.classList.add("selected");
 function colorSelected(event){
     if(event.target == elementoVermelho){
         elementoVermelho.classList.add("selected");
-            /*let verificaElementos = document.getElementsByClassName("color-palette");
-            console.log(verificaElementos);
-            for(let i=0; i<verificaElementos.length; i++){
-                if(verificaElementos[i] != "elementoVermelho"){
-                    verificaElementos.classList.toggle("selected");
-                }
-                if(verificaElementos[i] == "elementoVermelho"){
-                }
-            }*/
+        elementoAzul.classList.replace("selected", "color");
+        elementoVerde.classList.replace("selected", "color");
+        elementoPreto.classList.replace("selected", "color");
     }
     else if(event.target == elementoAzul){
         elementoAzul.classList.add("selected");
-        let verificaElementos = document.getElementsByClassName("selected");
-            for(let i=0; i<verificaElementos.length; i++){
-                if(verificaElementos[i] != "elementoAzul"){
-                    verificaElementos[i].classList.remove("selected")
-                }
-            }
+        elementoVermelho.classList.replace("selected", "color");
+        elementoVerde.classList.replace("selected", "color");
+        elementoPreto.classList.replace("selected", "color");
     }
     else if(event.target == elementoVerde){
         elementoVerde.classList.add("selected");
-        let verificaElementos = document.getElementsByClassName("selected");
-            for(let i=0; i<verificaElementos.length; i++){
-                if(verificaElementos[i] != "elementoVerde"){
-                    verificaElementos[i].classList.remove("selected")
-                }
-            }
+        elementoAzul.classList.replace("selected", "color");
+        elementoVermelho.classList.replace("selected", "color");
+        elementoPreto.classList.replace("selected", "color");
     }
     else if(event.target == elementoPreto){
         elementoPreto.classList.add("selected");
-        let verificaElementos = document.getElementsByClassName("selected");
-            for(let i=0; i<verificaElementos.length; i++){
-                if(verificaElementos[i] != "elementoPreto"){
-                    verificaElementos[i].classList.remove("selected")
-                }
-            }
-        }
+        elementoAzul.classList.replace("selected", "color");
+        elementoVerde.classList.replace("selected", "color");
+        elementoVermelho.classList.replace("selected", "color");
+    }
 }
 let elementoSelected = document.getElementById("color-palette");
 elementoSelected.addEventListener("click", colorSelected);
