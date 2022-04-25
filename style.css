@@ -19,28 +19,28 @@ h1{
     margin-left: 20px;
     margin-bottom: 5px;
 }
-#color-palette-1{
+#black{
     background-color: black;
     height: 40px;
     width: 40px;
     display: inline-block;
     border: solid 1px black;
 }
-#color-palette-2{
+#red{
     background-color: red;
     width: 40px;
     height: 40px;
     display: inline-block;
     border: solid 1px black;
 }
-#color-palette-3{
+#blue{
     background-color: blue;
     width: 40px;
     height: 40px;
     display: inline-block;
     border: solid 1px black;
 }
-#color-palette-4{
+#green{
     background-color: green;
     width: 40px;
     height: 40px;

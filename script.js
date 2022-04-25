@@ -1,7 +1,7 @@
-const elementoPreto = document.getElementById("color-palette-1");
-const elementoVermelho = document.getElementById("color-palette-2");
-const elementoAzul = document.getElementById("color-palette-3");
-const elementoVerde = document.getElementById("color-palette-4");
+const elementoPreto = document.getElementById("black");
+const elementoVermelho = document.getElementById("red");
+const elementoAzul = document.getElementById("blue");
+const elementoVerde = document.getElementById("green");
 
 
 elementoPreto.classList.add("selected");
@@ -32,5 +32,19 @@ function colorSelected(event){
         elementoVermelho.classList.replace("selected", "color");
     }
 }
-let elementoSelected = document.getElementById("color-palette");
-elementoSelected.addEventListener("click", colorSelected);
+
+let colorSelection = document.getElementById("color-palette");
+colorSelection.addEventListener("click", colorSelected);
+
+const elementoSelected = document.getElementById("pixel-board");
+elementoSelected.addEventListener("click", pixelSelected);
+
+function pixelSelected(event){
+    console.log(event.target);
+    let pixels = document.querySelectorAll(".board");
+    let colorSelect = document.querySelector(".selected");
+    console.log(colorSelect.id);
+    for(let pixel of pixels){
+        event.target.style.backgroundColor = colorSelect.id;
+    }
+}
