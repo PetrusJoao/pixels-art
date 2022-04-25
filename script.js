@@ -40,11 +40,19 @@ const elementoSelected = document.getElementById("pixel-board");
 elementoSelected.addEventListener("click", pixelSelected);
 
 function pixelSelected(event){
-    console.log(event.target);
     let pixels = document.querySelectorAll(".board");
     let colorSelect = document.querySelector(".selected");
-    console.log(colorSelect.id);
     for(let pixel of pixels){
         event.target.style.backgroundColor = colorSelect.id;
+    }
+}
+
+const botaoLimpar = document.getElementById("clear-board");
+botaoLimpar.addEventListener("click", limpar);
+
+function limpar(event){
+    let pixels = document.querySelectorAll(".pixel");
+    for(let pixel of pixels){
+        pixel.style.backgroundColor = "white";
     }
 }
