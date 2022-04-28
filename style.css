@@ -8,6 +8,7 @@ h1{
 }
 
 #pallete-container{
+    display: block;
     width: fit-content;
     margin-left: auto;
     margin-right: auto; 
@@ -60,10 +61,22 @@ h1{
     border: solid 1px black;
 }
 
-#clear-board{
+.botoes{
     display: block;
     margin-left: auto;
     margin-right: auto;
     margin-top: 2em;
     margin-bottom: 2em;
+}
+
+#board-size{
+    width: 5em;
+}
+
+#clear-board{
+    width: 5em;
+}
+
+#generate-board{
+    width: 5em;
 }
