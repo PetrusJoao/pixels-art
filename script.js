@@ -61,9 +61,9 @@ elementoSelected.addEventListener("click", pixelSelected);
 
 function pixelSelected(event){
     let pixels = document.querySelectorAll(".board");
-    let colorSelect = document.querySelector(".selected");
+    let colorSelect = document.querySelector(".selected");    
     for(let pixel of pixels){
-        event.target.style.backgroundColor = colorSelect.id;
+        event.target.style.backgroundColor = colorSelect.style.backgroundColor;
     }
 }
 
@@ -101,10 +101,8 @@ function gerar(event){
 
 const gerarCorAleatoria = document.getElementById("board-ramdom");
 gerarCorAleatoria.addEventListener("click", corAleatoria);
-if(location.reload){
-    corAleatoria();
-}
-function corAleatoria(){
+
+function corAleatoria(){    
     elementoVermelho.style.backgroundColor = gerarCor();
     elementoAzul.style.backgroundColor = gerarCor();
     elementoVerde.style.backgroundColor = gerarCor();
@@ -123,4 +121,18 @@ function corOriginal(){
     elementoVermelho.style.backgroundColor = 'red';
     elementoAzul.style.backgroundColor = 'blue';
     elementoVerde.style.backgroundColor = 'green';
+}
+
+const setarCorOriginal = document.getElementById("board-original");
+setarCorOriginal.addEventListener("click", corOriginal);
+
+document.addEventListener('DOMContentLoaded', checkVisit())
+
+function checkVisit(){
+    if(!sessionStorage.firstVisit){
+        corOriginal();
+        sessionStorage.firstVisit = 1;
+    }else{
+        corAleatoria();
+    }
 }
