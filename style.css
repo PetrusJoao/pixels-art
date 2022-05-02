@@ -15,8 +15,8 @@ h1{
 }
 
 #color-palette{
-    display: grid;
-    grid-template-columns: 40px 40px 40px 40px 40px;
+    display: flex;
+    justify-content: center;
     margin-left: 20px;
     margin-bottom: 5px;
 }
@@ -51,6 +51,7 @@ h1{
 
 #pixel-board .board{
     display: flex;
+    justify-content: center;
 }
 
 .pixel{
@@ -61,7 +62,8 @@ h1{
 }
 
 .botoes{
-    display: block;
+    display: flex;
+    justify-content: center;
     margin-left: auto;
     margin-right: auto;
     margin-top: 2em;

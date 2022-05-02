@@ -22,7 +22,6 @@ function criaBoard(tamanho){
             let boardChild = document.getElementsByClassName("board");
             boardChild[j].appendChild(criaLinha);
             criaLinha.className = "pixel"
-            criaLinha.innerText = [i];
         }
         }
 }
@@ -91,6 +90,11 @@ function gerar(event){
     let pixelBoard = document.getElementById("pixel-board");
     while(pixelBoard.firstChild){
         pixelBoard.removeChild(pixelBoard.firstChild);
-    }    
+    }
+    if(size < 5){
+        size = 5;
+    }else if(size > 50){
+        size = 50;
+    }
     criaBoard(size);
 }
