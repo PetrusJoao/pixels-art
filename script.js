@@ -6,28 +6,25 @@ const elementoVerde = document.getElementById("green");
 
 elementoPreto.classList.add("selected");
 
-let tamanho;
-window.onload = criaBoard(tamanho)
-function criaBoard(){
-if(tamanho == undefined){
-    tamanho = 5;
-}
-for(let i=0; i<tamanho; i++){
-    let criaColuna = document.createElement("div");
-    let pixelBoard = document.getElementById("pixel-board");
-    pixelBoard.appendChild(criaColuna);
-    criaColuna.className = "board"
-}
-const criaPixel = document.createElement("div");
-    
-for(let i=0; i<tamanho; i++){
-    for(let j=0; j<tamanho; j++){
-    let criaLinha = document.createElement("div");
-    let boardChild = document.getElementsByClassName("board");
-    boardChild[i].appendChild(criaLinha);
-    criaLinha.className = "pixel"
-    }
-    }
+let tamanhoInit = 5;
+window.onload = criaBoard(tamanhoInit)
+
+function criaBoard(tamanho){
+    for(let i=0; i<tamanho; i++){
+        let criaColuna = document.createElement("div");
+        let pixelBoard = document.getElementById("pixel-board");
+        pixelBoard.appendChild(criaColuna);
+        criaColuna.className = "board"
+    }   
+    for(let i=0; i<tamanho; i++){
+        for(let j=0; j<tamanho; j++){
+            let criaLinha = document.createElement("div");
+            let boardChild = document.getElementsByClassName("board");
+            boardChild[j].appendChild(criaLinha);
+            criaLinha.className = "pixel"
+            criaLinha.innerText = [i];
+        }
+        }
 }
 
 function colorSelected(event){
@@ -89,7 +86,11 @@ function gerar(event){
     let size = input.value; 
     if(size === ""){        
         window.alert("Board inválido!");
+        return 0;
     }
-    tamanho = size;
-    criaBoard(tamanho)
+    let pixelBoard = document.getElementById("pixel-board");
+    while(pixelBoard.firstChild){
+        pixelBoard.removeChild(pixelBoard.firstChild);
+    }    
+    criaBoard(size);
 }
