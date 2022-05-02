@@ -98,3 +98,27 @@ function gerar(event){
     }
     criaBoard(size);
 }
+
+const gerarCorAleatoria = document.getElementById("board-ramdom");
+gerarCorAleatoria.addEventListener("click", corAleatoria);
+if(location.reload){
+    corAleatoria();
+}
+function corAleatoria(){
+    elementoVermelho.style.backgroundColor = gerarCor();
+    elementoAzul.style.backgroundColor = gerarCor();
+    elementoVerde.style.backgroundColor = gerarCor();
+
+}
+function gerarCor(opacidade = 1) {
+    let r = parseInt(Math.random() * 255); 
+    let g = parseInt(Math.random() * 255); 
+    let b = parseInt(Math.random() * 255);
+ 
+    return `rgba(${r}, ${g}, ${b}, ${opacidade})`;     
+ }
+function corOriginal(){
+    elementoVermelho.style.backgroundColor = 'red';
+    elementoAzul.style.backgroundColor = 'blue';
+    elementoVerde.style.backgroundColor = 'green';
+}
