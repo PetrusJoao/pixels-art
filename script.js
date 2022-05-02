@@ -110,6 +110,8 @@ function corAleatoria(){
     elementoVerde.style.backgroundColor = gerarCor();
 
 }
+//Obs.: Função tirada do tutorial encontrado na página: https://wallacemaxters.com.br/blog/48/como-gerar-cores-aleatorias-no-javascript
+//Obs.2: Não sei se caracteriza como violação da propriedade intelectual, mas utilizei porque eu entendi o que o código faz.
 function gerarCor(opacidade = 1) {
     let r = parseInt(Math.random() * 255); 
     let g = parseInt(Math.random() * 255); 
