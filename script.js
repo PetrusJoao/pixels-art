@@ -125,14 +125,3 @@ function corOriginal(){
 
 const setarCorOriginal = document.getElementById("board-original");
 setarCorOriginal.addEventListener("click", corOriginal);
-
-document.addEventListener('DOMContentLoaded', checkVisit())
-
-function checkVisit(){
-    if(!sessionStorage.firstVisit){
-        corOriginal();
-        sessionStorage.firstVisit = 1;
-    }else{
-        corAleatoria();
-    }
-}
