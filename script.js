@@ -5,6 +5,7 @@ const elementoVerde = document.getElementById("green");
 
 
 elementoPreto.classList.add("selected");
+elementoPreto.style.backgroundColor = 'black';
 
 let tamanhoInit = 5;
 window.onload = criaBoard(tamanhoInit)
@@ -121,6 +122,7 @@ function corOriginal(){
     elementoVermelho.style.backgroundColor = 'red';
     elementoAzul.style.backgroundColor = 'blue';
     elementoVerde.style.backgroundColor = 'green';
+    elementoPreto.backgroundColor = 'black';
 }
 
 const setarCorOriginal = document.getElementById("board-original");
