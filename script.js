@@ -3,12 +3,14 @@ const elementoVermelho = document.getElementById("red");
 const elementoAzul = document.getElementById("blue");
 const elementoVerde = document.getElementById("green");
 
+//function primeiroCarregamento(){
+    elementoPreto.classList.add("selected");
+    elementoPreto.style.backgroundColor = 'black';
+    elementoAzul.style.backgroundColor = 'blue';
+    elementoVerde.style.backgroundColor = 'green';
+    elementoVermelho.style.backgroundColor = 'red';
+    //}
 
-elementoPreto.classList.add("selected");
-elementoPreto.style.backgroundColor = 'black';
-
-let tamanhoInit = 5;
-window.onload = criaBoard(tamanhoInit)
 
 function criaBoard(tamanho){
     for(let i=0; i<tamanho; i++){
@@ -103,6 +105,8 @@ function gerar(event){
 const gerarCorAleatoria = document.getElementById("board-ramdom");
 gerarCorAleatoria.addEventListener("click", corAleatoria);
 
+
+
 function corAleatoria(){    
     elementoVermelho.style.backgroundColor = gerarCor();
     elementoAzul.style.backgroundColor = gerarCor();
@@ -127,3 +131,10 @@ function corOriginal(){
 
 const setarCorOriginal = document.getElementById("board-original");
 setarCorOriginal.addEventListener("click", corOriginal);
+
+window.onload = () => {
+    let tamanhoInit = 5;
+    criaBoard(tamanhoInit)
+    /* primeiroCarregamento() */
+    corAleatoria()
+};    
